@@ -1,0 +1,28 @@
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/Subjects">Subject Management</a></li>
+   </ol>
+</nav>
+
+<!--
+{{#if alert}}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{alert}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{{/if}}
+-->
+
+{{#each rows}}
+<!-- old version no ajax
+<form class="row g-3 needs-validation" method="POST" action="/users/deleteuser/{{this.id}}" novalidate> 
+-->
+
+<!-- New version with ajax -->
+<form class="row g-3 needs-validation" novalidate> 
+
+
+  {{> subject-deleteform}}
+</form>
+{{/each}}

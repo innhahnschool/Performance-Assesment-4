@@ -1,0 +1,13 @@
+
+{{#if alert}}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{alert}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{{/if}}
+
+{{#each rows}}
+<form class="row g-3 needs-validation" method="Get" action="/subjects/" novalidate> 
+  {{> subject-viewform}}
+</form>
+{{/each}}
